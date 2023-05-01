@@ -18,52 +18,57 @@ export default function TextForm(props) {
     setText(newText);
   };
   const handleCCClick = () => {
-    let newText = text.split(" ").map((word) => {
-      let char = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-      return char
-    }).join(" ");  
+    let newText = text
+      .split(" ")
+      .map((word) => {
+        let char = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        return char;
+      })
+      .join(" ");
     setText(newText);
   };
 
-  // split = 
-  // slice = 
-  // map =
-  // charAt =
-  // join = 
+  // const handleKCClick = () =>{
+  //   let newText = text.split(" ").map((word) =>{
+  //     let char = word.charAt(0).toUpperCase() + word.slice()
+  //     return char
+  //   }).join(" ");
+  //   setText(newText);
+  // }
 
   const handleClearClick = () => {
-    let newText = ('');
+    let newText = "";
     setText(newText);
   };
 
   return (
-    <div>
-      <div className="container">
-        <h1>{props.heading}</h1>
-        <div className="mb-3">
-          <textarea
-            className="form-control"
-            value={text}
-            onChange={handleOnChange}
-            id="myBox"
-            rows="8"
-          ></textarea>
-        </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
-          Convert to Uppercase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleLoClick}>
-          Convert to Lowercase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleCCClick}>
-          Convert to CamelCase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleClearClick}>
-          Clear
-        </button>
-        
+    <div className="container">
+      <h1>{props.heading}Enter the Text</h1>
+      <div className="mb">
+        <textarea
+          className="form"
+          value={text}
+          onChange={handleOnChange}
+          id="myBox"
+          rows="8"
+        ></textarea>
       </div>
-      <div className="container">
+      <button className="btn" onClick={handleUpClick}>
+        Convert to Uppercase
+      </button>
+      <button className="btn" onClick={handleLoClick}>
+        Convert to Lowercase
+      </button>
+      <button className="btn" onClick={handleCCClick}>
+        Convert to CamelCase
+      </button>
+      {/* <button className="btn btn-primary mx-2" onClick={handleKCClick}>
+          Convert to KebabCase
+        </button> */}
+      <button className="btn" onClick={handleClearClick}>
+        Clear
+      </button>
+
         <h1>Your Text Summary</h1>
         <p>
           {text.split(" ").length} words and {text.length} characters
@@ -71,8 +76,12 @@ export default function TextForm(props) {
         <p>{0.008 * text.split(" ").length} Minutes to read</p>
         <h3>Preview</h3>
         <p>{text}</p>
-      </div>
     </div>
   );
-  }
-  
+}
+
+// split =
+// slice =
+// map =
+// charAt =
+// join =

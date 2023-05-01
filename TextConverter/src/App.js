@@ -1,19 +1,12 @@
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import { useState } from "react";
-function App() {
-  const [text, setText] = useState("");
+import "./style.css";
 
-  const handleOnChange = (event) => {
-    setText(event.target.value);
-  };
+function App() {
   return (
-    
     <>
-      <Navbar />
-      <div className="container" my-3>
-        <TextForm heading="Enter the Text to Analyze below" text={text} handleOnChange={handleOnChange}/>
-      </div>
+      {/* <Navbar /> */}
+      <TextForm />
     </>
   );
 }
