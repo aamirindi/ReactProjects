@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './style.css'
+import React, { useState } from "react";
+import "./style.css";
 
 function BmiCalculator() {
   const [weight, setWeight] = useState(0);
@@ -13,17 +13,35 @@ function BmiCalculator() {
   }
 
   return (
-    <div>
-      <h1>BMI Calculator</h1>
-      <label>Weight (in kg) : </label>
-      <input className='in' type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
+    <div className="container">
+      <h1>Bmi Calculator</h1>
+      <div className="input">
+        <label>Weight (in kg) : </label>
+        <input
+          className="in"
+          type="number"
+          value={weight}
+          onChange={(e) => setWeight(e.target.value)}
+        />
+      </div>
       <br />
-      <label>Height (in cm) : </label>
-      <input className='in' type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
-      <br />
-      <button className='click' onClick={calculateBmi}>Calculate BMI</button>
-      <br />
-      <h2>BMI: {bmi}</h2>
+      <div className="input">
+        <label>Height (in cm) : </label>
+        <input
+          className="in"
+          type="number"
+          value={height}
+          onChange={(e) => setHeight(e.target.value)}
+        />
+      </div>
+      <div className="btn">
+        <button className="click" onClick={calculateBmi}>
+          Calculate BMI
+        </button>
+      </div>
+      <div className="result">
+        <h2>BMI : {bmi}</h2>
+      </div>
     </div>
   );
 }
