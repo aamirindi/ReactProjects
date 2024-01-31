@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  background-color: #e5e5e5;
 }
 
 .sidebar {
@@ -85,6 +86,29 @@ body {
 
     & .openbtn {
       display: block;
+    }
+  }
+}
+
+.desktop {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+
+  & nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    & a {
+      padding: 10px;
+      text-decoration: none;
+      color: #818181;
+
+      &:hover {
+        color: #f1f1f1;
+      }
     }
   }
 }
