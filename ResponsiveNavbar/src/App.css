@@ -8,7 +8,7 @@ body {
 .sidebar {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   background-color: #111;
@@ -51,7 +51,7 @@ body {
 
 .openbtn {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   padding: 10px 15px;
